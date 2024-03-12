@@ -40,6 +40,7 @@ async function main() {
   }
 
   if (data && data.SecretID) {
+    core.setSecret(data.SecretID);
     core.debug('✔ Nomad Token successfully retrieved');
 
     core.startGroup('Token Info');
